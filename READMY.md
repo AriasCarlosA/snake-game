@@ -33,7 +33,10 @@ Este proyecto sigue un diseño basado en el patrón de arquitectura **Modelo-Vis
 
 2. Instala las dependencias:
    ```bash
-   pip install -r 
+   - python3 -m venv venv  
+   - source venv/bin/activate
+   - pip3 install pygame 
+   - python.py
    ```
 
 ## ▶️ Ejecución
