@@ -1,15 +1,24 @@
 # 🐍 Juego de la Serpiente (Snake Game)
 
-Proyecto académico para el curso de **Lógica de Programación** — Universidad Internacional del Ecuador (UIDE).
+Proyecto Integrador para el curso de **Lógica de Programación** — Universidad Internacional del Ecuador (UIDE).
 
 **Autor:** Carlos Arias
 **Profesora:** Estefanía Vanessa Heredia Jiménez
 
 ## 📋 Descripción
 
-Implementación en **Python** del clásico juego de la serpiente. El jugador controla una serpiente que se mueve por un tablero, debe comer alimentos para crecer y ganar puntos, y pierde si choca contra los bordes del tablero o contra su propio cuerpo.
+Implementación en **Python** (con la librería `pygame`) del clásico juego de la serpiente. El jugador controla una serpiente que se mueve por un tablero, debe comer alimentos para crecer y ganar puntos, y pierde si choca contra los bordes del tablero o contra su propio cuerpo.
 
-Este proyecto sigue un diseño basado en el patrón de arquitectura **Modelo-Vista-Controlador (MVC)**, separando la lógica del juego, el estado de los datos y la representación visual.
+El proyecto integra de forma explícita el contenido de las 4 unidades del sílabo de Lógica de Programación:
+
+| Unidad | Tema | Dónde se aplica |
+|--------|------|------------------|
+| 1 | Resolución de problemas y entorno de programación | Algoritmo general del juego (`main.py`, bucle `ejecutar()` en `game.py`) |
+| 2 | Variables y tipos de datos básicos | Enteros, booleanos, cadenas y tuplas en `snake.py`, `food.py`, `game.py` |
+| 3 | Condicionales (`if/elif/else`) y bucles (`while`, `for`) | Validación de dirección, detección de colisiones, bucle principal del juego |
+| 4 | Estructuras de datos (listas, tuplas, diccionarios) y funciones | Cuerpo de la serpiente como lista de tuplas, diccionarios `CONFIG`/`COLORES`/`TECLAS_DIRECCION`, funciones con parámetros y retorno |
+
+El diseño sigue el patrón de arquitectura **Modelo-Vista-Controlador (MVC)**, separando la lógica del juego, el estado de los datos y la representación visual.
 
 ## 🎮 Cómo jugar
 
@@ -27,16 +36,13 @@ Este proyecto sigue un diseño basado en el patrón de arquitectura **Modelo-Vis
 
 1. Clona este repositorio:
    ```bash
-   git clone https://github.com/TU_USUARIO/snake-game.git
+   git clone https://github.com/AriasCarlosA/snake-game.git
    cd snake-game
    ```
 
 2. Instala las dependencias:
    ```bash
-   - python3 -m venv venv  
-   - source venv/bin/activate
-   - pip3 install pygame 
-   - python.py
+   pip install -r requirements.txt
    ```
 
 ## ▶️ Ejecución
@@ -62,7 +68,8 @@ snake-game/
 │   ├── food.py                     # Clase Food (modelo del alimento)
 │   └── game.py                     # Clase Game (controlador y vista)
 │
-├── README.md
+├── requirements.txt
+└── README.md
 ```
 
 ## 🧩 Arquitectura del sistema
